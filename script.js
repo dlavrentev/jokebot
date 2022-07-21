@@ -22,6 +22,12 @@ const VoiceRSS={speech(e){this._validate(e),this._request(e)},_validate(e){if(!e
 
 // test();
 
+// Passing Joke to VoiceRSS API
+
+function tellMe(joke) {
+    console.log('tell me', joke);
+}
+
 // Get Jokes from Joke API
 
 async function getJokes() {
@@ -35,7 +41,7 @@ async function getJokes() {
         } else {
             joke = data.joke;
         }
-        console.log(joke)
+        tellMe(joke);
     } catch (error) {
         // Catch Errors Here
         console.log("whoops", error);
